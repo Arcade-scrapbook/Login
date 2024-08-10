@@ -1,0 +1,58 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+<html>
+
+<head>
+  <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+  <script src='https://kit.fontawesome.com/a16a49be46.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form class='form rotate' action='' method=post>
+    <!-- Added 'rotate' class here -->
+    <h1>Welcome Back</h1>
+    <p>Enter your credentials to continue.</p>
+
+    <div class='input-wrapper'>
+      <input type='text' name='userid' placeholder='Enter your username' />
+      <i class='fa-solid fa-user'></i>
+    </div>
+
+    <div class='input-wrapper'>
+      <input type='password' placeholder='Enter your password' id='pass' name='password' />
+      <i class='fa-solid fa-lock' onclick='hide()' id='lock'></i>
+    </div>
+
+    <div class='button-wrapper'>
+      <button type='submit'>
+        Sign In&nbsp;
+        <i class='fa-solid fa-arrow-right-to-bracket'></i>
+      </button>
+    </div>
+  </form>
+  <br>
+  <br>
+  <footer>
+    <div>
+      <span>Created By <a id='c' href=''>Tejas Patil</a> | <span class='far fa-copyright' aria-hidden='true'></span>
+        2024 All rights
+        reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    function hide() {
+      var x = document.getElementById('pass');
+      var y = document.getElementById('lock');
+      if (x.type === 'password') {
+        x.type = 'text';
+        y.className = 'fa-solid fa-unlock-keyhole';
+      } else {
+        x.type = 'password';
+        y.className = 'fa-solid fa-lock';
+      }
+    }
+  </script>
+</body>
+
+</html>
